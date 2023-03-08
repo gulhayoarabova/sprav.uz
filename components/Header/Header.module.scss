@@ -1,0 +1,84 @@
+@mixin flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+@mixin aligncenter {
+  display: flex;
+  align-items: center;
+}
+.header{
+border-bottom: 1px solid #E9E9EA;
+.container {
+  padding: 15px;
+  width: 90%;
+  margin: 0 auto;
+  .top {
+    @include flex;
+    .left {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      ul {
+        margin-left: 10px;
+        li:nth-child(1) {
+          color: #0aa9b4;
+          font-size: 12px;
+        }
+        li:nth-child(2) {
+          color: #00315c;
+          font-size: 30px;
+          font-weight: 700;
+        }
+      }
+    }
+    .lang_wrap {
+      display: flex;
+
+      li {
+        margin: 0 5px;
+        color: gray;
+        &:nth-child(1) {
+          color: black;
+        }
+      }
+    }
+  }
+  .bottom {
+    margin-top: 20px;
+    @include aligncenter;
+    button{
+        background-color: transparent;
+        border: none;
+    }
+    .search_part {
+        width: 100%;
+      @include aligncenter;
+      select {
+        background: #f7fcfc;
+        border: 2px solid #0aa9b4;
+        border-radius: 10px 0px 0px 10px;
+        width: 20%;
+        min-height: 50px;
+        padding: 0 20px;
+        margin-left: 30px;
+
+      }
+      .search_input{
+          width: 80%;
+      input {
+        width: 100%;
+background-color: #fff;
+
+        border: 2px solid #0aa9b4;
+        border-radius: 0px 10px 10px 0px;
+        border-left: none;
+        height: 50px;
+        padding: 0 20px;
+      }
+    }
+
+    }
+  }
+}
+}
